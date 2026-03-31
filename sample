@@ -18,6 +18,7 @@ Choose ec2 in service and ec2 in usecase and now attach below given policy. And 
 3.ec2-management-role
 Attach AdministratorAccess
 ----
+create cluster
 create node groups
 ----
 access --> access entry--> add management role
@@ -25,4 +26,7 @@ access policy - AmazonEKSClusterAdminPolicy
 Go to ec2
 ----
 Create ec2 instance
-aws linux, advanced -> 
+aws linux, advanced -> add eksaccess role refer readme
+install kubectl and awscli ref readme
+---
+

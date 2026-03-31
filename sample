@@ -1,0 +1,28 @@
+First create iam roles and policy which is required in this project
+Go to role and click create role
+----
+Choose eks in service and eks cluster in usecase and now attach below given policy. And give any name to your role I have given EKSClusterRole and click create.
+1.EKSClusterRole
+Attach AmazonEKSClusterPolicy
+
+
+Now create 2nd role Go to role and click create role
+Choose ec2 in service and ec2 in usecase and now attach below given policy. And give any name to your role I have given eks-node-role and click create.
+2.eks-node-role
+Attach AmazonEKSWorkerNodePolicy , AmazonEKS_CNI_Policy , AmazonEC2ContainerRegistryReadOnly
+
+
+Now create 3rd role Go to role and click create role
+Choose ec2 in service and ec2 in usecase and now attach below given policy. And give any name to your role I have given ec2-management-role and click create.
+
+3.ec2-management-role
+Attach AdministratorAccess
+----
+create node groups
+----
+access --> access entry--> add management role
+access policy - AmazonEKSClusterAdminPolicy
+Go to ec2
+----
+Create ec2 instance
+aws linux, advanced -> 
